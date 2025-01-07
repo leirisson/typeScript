@@ -11,7 +11,7 @@ elementForm.addEventListener("submit", function(e){
   const txt_mensagem: string = inputElementMsg.value
   
   // adcionando a mensagem no elemento
-  elementResultado.textContent = `Voce disse: ${txt_mensagem}`
+  elementResultado.textContent = `Você disse: ${txt_mensagem}`
 
 
   this.reset()
