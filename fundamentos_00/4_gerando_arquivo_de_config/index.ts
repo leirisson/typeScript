@@ -1,0 +1,1 @@
+console.log("compilado de forma rapida ")
