@@ -2,11 +2,12 @@ import { Avatar } from '../Avatar/Avatar'
 import styles from './Comment.module.css'
 import { ThumbsUp, Trash } from 'phosphor-react'
 
+// eslint-disable-next-line react/prop-types
 export function Comment({srcAvatar}) {
     return (
         <>
             <div className={styles.comment}>
-                <Avatar src={srcAvatar} alt="avatar perfil" />
+                <Avatar hasBorder={false} src={srcAvatar} alt="avatar perfil" />
                 <div className={styles.commentBox}>
                     <div className={styles.commentContent}>
                         <header>
