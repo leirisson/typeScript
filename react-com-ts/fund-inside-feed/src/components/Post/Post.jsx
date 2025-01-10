@@ -4,11 +4,13 @@ import { Avatar } from '../Avatar/Avatar'
 
 import {format, formatDistanceToNow} from 'date-fns';
 import ptBr from  'date-fns/locale/pt-BR';
+import { useState } from 'react';
 
 
 // eslint-disable-next-line react/prop-types
 export function Post({author, content, publisheAt}) {
-  
+  const [comments, setComments] = useState(['post muito bacana'])
+
   const publisheAtFormat = format(publisheAt, "d 'de' LLLL 'às' HH:mm'h'",{
     locale: ptBr,
   })
@@ -20,6 +22,14 @@ export function Post({author, content, publisheAt}) {
   })
 
 
+
+  function handleComment(e){
+    e.preventDefault()
+
+    const newCommentText = e.target.comment.value
+    setComments([...comments, newCommentText])
+   
+  }
 
   return (
     <>
@@ -46,19 +56,22 @@ export function Post({author, content, publisheAt}) {
           })}
         </div>
 
-        <form className={styles.commentForm}>
+        <form onSubmit={(e) => handleComment(e)} className={styles.commentForm}>
           <strong>Deixe seu feedback</strong>
           <textarea
-            placeholder='Deixe seu comentário aqui!' />
+            name='comment'
+            placeholder='Deixe seu comentário aqui!'
+             />
           <footer>
             <button type='submit'>Publicar</button>
           </footer>
         </form>
 
         <div className={styles.commentList}>
-          <Comment srcAvatar="https://github.com/larisa.png"/>
-          <Comment srcAvatar="https://github.com/marcos.png"/>
-          <Comment srcAvatar="https://github.com/thiago.png"/>
+          {comments.map(comment => {
+            return <Comment contenComment={comment}  srcAvatar={author.avatarUrl }/>
+          })}
+         
         </div>
       </article>
     </>

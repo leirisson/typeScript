@@ -3,7 +3,8 @@ import styles from './Comment.module.css'
 import { ThumbsUp, Trash } from 'phosphor-react'
 
 // eslint-disable-next-line react/prop-types
-export function Comment({srcAvatar}) {
+export function Comment({contenComment,srcAvatar}) {
+    console.log(contenComment)
     return (
         <>
             <div className={styles.comment}>
@@ -19,10 +20,9 @@ export function Comment({srcAvatar}) {
                             <button title='Deletar coméntario'>
                                 <Trash size={24} />
                             </button>
-
                         </header>
                         <p>
-                            muitobom deve parabéns
+                            {contenComment}
                         </p>
                     </div>
                     <footer>
