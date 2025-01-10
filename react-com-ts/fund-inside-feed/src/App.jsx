@@ -13,8 +13,13 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-        <Post author="Leirisson" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum accusamus ratione neque? Quae qui tempore blanditiis animi ipsum tenetur libero fugiat! Facere assumenda praesentium autem repudiandae sint animi cumque atque?" />
-        <Post author="Leirisson" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum accusamus ratione neque? Quae qui tempore blanditiis animi ipsum tenetur libero fugiat! Facere assumenda praesentium autem repudiandae sint animi cumque atque?" />
+        <Post 
+          author="Leirisson" 
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum accusamus ratione neque? Quae qui tempore blanditiis animi ipsum tenetur libero fugiat! Facere assumenda praesentium autem repudiandae sint animi cumque atque?" 
+          />
+        <Post 
+          author="Leirisson" 
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum accusamus ratione neque? Quae qui tempore blanditiis animi ipsum tenetur libero fugiat! Facere assumenda praesentium autem repudiandae sint animi cumque atque?" />
         </main>
        
       </div>
