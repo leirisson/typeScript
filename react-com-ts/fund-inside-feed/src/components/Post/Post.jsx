@@ -28,6 +28,7 @@ export function Post({author, content, publisheAt}) {
 
     const newCommentText = e.target.comment.value
     setComments([...comments, newCommentText])
+    e.target.comment.value = ''
    
   }
 
