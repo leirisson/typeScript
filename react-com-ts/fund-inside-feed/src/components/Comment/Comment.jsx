@@ -1,10 +1,22 @@
+import { useState } from 'react'
 import { Avatar } from '../Avatar/Avatar'
 import styles from './Comment.module.css'
 import { ThumbsUp, Trash } from 'phosphor-react'
 
 // eslint-disable-next-line react/prop-types
-export function Comment({contenComment,srcAvatar}) {
-    console.log(contenComment)
+export function Comment({ contenComment, srcAvatar, onDeleteComment }) {
+    const [likeCount, setLikeCount]  = useState(0);
+
+    function handleLikeComment(){
+        setLikeCount((prevLike) => prevLike + 1)
+        
+    }
+
+    // função para contabilizar os likes de um comentario
+    function handleDeleteComment() {
+        onDeleteComment(contenComment)
+    }
+
     return (
         <>
             <div className={styles.comment}>
@@ -17,7 +29,7 @@ export function Comment({contenComment,srcAvatar}) {
                                 <time title="12 de dezembro às 8:15" dateTime="2024-12-12 08:15:06" >Cerca de há 1h atrás</time>
                             </div>
 
-                            <button title='Deletar coméntario'>
+                            <button onClick={handleDeleteComment} title='Deletar coméntario'>
                                 <Trash size={24} />
                             </button>
                         </header>
@@ -26,9 +38,9 @@ export function Comment({contenComment,srcAvatar}) {
                         </p>
                     </div>
                     <footer>
-                        <button>
+                        <button onClick={handleLikeComment}>
                             <ThumbsUp />
-                            Aplaudir <span>20</span>
+                            Aplaudir <span>{likeCount}</span>
                         </button>
                     </footer>
                 </div>
