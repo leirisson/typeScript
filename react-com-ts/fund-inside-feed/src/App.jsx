@@ -188,7 +188,7 @@ export function App() {
       publisheAt: new Date("2023-05-13 13:45:00"),
     },
   ];
-  
+
   return (
     <>
       <Header />
@@ -196,18 +196,18 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-        {
-          posts.map(post => (
-            <Post
-              key={post.id}
-              author={post.author}
-              content={post.content}
-              publisheAt={post.publisheAt}
-            />
-          ))
-        }
+          {
+            posts.map(post => (
+              <Post
+                key={post.id}
+                author={post.author}
+                content={post.content}
+                publisheAt={post.publisheAt}
+              />
+            ))
+          }
         </main>
-       
+
       </div>
 
     </>
