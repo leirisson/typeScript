@@ -2,7 +2,10 @@ import styles from './Avatar.module.css'
 
 interface Avatar {
     src:string;
-    hasBorder: boolean
+    alt:string;
+    hasBorder: boolean;
+    className?:string;
+
 }
 
 

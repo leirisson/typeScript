@@ -78,7 +78,7 @@ essa função deleta um comentario
       <article className={styles.post}>
         <header>
           <div className={styles.author}>
-            <Avatar className={styles.avatar} src={author.avatarUrl} />
+            <Avatar  hasBorder src={author.avatarUrl} alt='' />
             <div className={styles.authorinfo}>
               <strong>{author.name}</strong>
               <span>{author.role}</span>

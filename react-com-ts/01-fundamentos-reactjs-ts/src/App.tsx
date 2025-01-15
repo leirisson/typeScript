@@ -1,6 +1,7 @@
-import { Header } from "./components/Header/Header"
+import {Header} from './components/Header/Header'
 import { Post } from "./components/Post/Post"
 import { Sidebar } from "./components/Sidebar/Sidebar"
+
 import './global.css'
 import styles from './App.module.css'
 
@@ -10,7 +11,7 @@ export function App() {
     {
       id: 1,
       author: {
-        avatarUrl: "https://github.com/larisa.png",
+        avatarUrl: "https://github.com/leirisson.png",
         name: "Leirisson Souza",
         role: "Developer Web",
       },

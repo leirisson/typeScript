@@ -3,8 +3,12 @@ import { Avatar } from '../Avatar/Avatar'
 import styles from './Comment.module.css'
 import { ThumbsUp, Trash } from 'phosphor-react'
 
-// eslint-disable-next-line react/prop-types
-export function Comment({ contenComment, srcAvatar, onDeleteComment }) {
+interface CommentProps {
+    contenComment: string;
+    onDeleteComment: (comment: string) => void;
+    srcAvatar: string
+}
+export function Comment({ contenComment, srcAvatar, onDeleteComment }: CommentProps) {
     const [likeCount, setLikeCount]  = useState(0);
 
     function handleLikeComment(){
@@ -20,7 +24,7 @@ export function Comment({ contenComment, srcAvatar, onDeleteComment }) {
     return (
         <>
             <div className={styles.comment}>
-                <Avatar hasBorder={false} src={srcAvatar} alt="avatar perfil" />
+                <Avatar hasBorder={false} src={srcAvatar} alt="" />
                 <div className={styles.commentBox}>
                     <div className={styles.commentContent}>
                         <header>
