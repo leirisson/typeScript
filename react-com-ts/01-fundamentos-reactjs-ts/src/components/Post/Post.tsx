@@ -16,7 +16,7 @@ interface Author {
 
 interface Content {
   type: 'paragraph' | 'link';
-  content: string;
+  content: string[];
 }
 
 interface PostsProps {
