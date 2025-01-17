@@ -21,12 +21,9 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
 width: 100px;
 height: 100px;
 color: #fff;
+border-radius: 4px;
+border: none;
 background-color: ${props => props.theme.primary};
-
-/* ${props => {
-        return css`
-    background-color: ${ButtonVariants[props.variant]}
-    `
-    }
-    } */
+margin: 8px;
+color: ${props => props.theme.white};
 `
