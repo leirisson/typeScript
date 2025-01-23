@@ -25,7 +25,5 @@ margin: 8px;
 color: #fff;
 border-radius: 4px;
 border: none;
-/* background-color: ${props => props.theme.primary};
-color: ${props => props.theme.white}; */
 background-color: ${props => props.theme.primary};
 `
